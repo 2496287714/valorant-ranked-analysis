@@ -14,17 +14,16 @@ import os
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(BASE, "data", "raw")
 
-# 地图代号 -> 国服中文名（Juliett/Infinity 已据 VALORANT Wiki 核实；
-# Jam/Foxtrot/Plummet 待向用户确认，先标 NULL）
+# 地图代号 -> 国服官方中文名（均经官网/BWIKI/VALORANT Wiki 核实）
 MAP_NAMES = {
     "Ascent": "亚海悬城",
     "Triad": "隐世修所",
     "Bonsai": "霓虹町",
-    "Juliett": "日落小镇",
+    "Juliett": "日落之城",
     "Infinity": "幽邃地窟",
-    "Jam": None,
-    "Foxtrot": None,
-    "Plummet": None,
+    "Jam": "莲华古城",
+    "Foxtrot": "微风岛屿",
+    "Plummet": "天枢云阙",
 }
 
 # 段位 tier -> 名称（国服 11=白银III，其余按需补；保留数字字段）

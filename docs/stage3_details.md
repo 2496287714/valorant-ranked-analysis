@@ -25,7 +25,10 @@ thrifty、flawless、三/四/五杀、时长、MVP/SVP。
 
 - **KAST**：接口返回的 `kast` 字段 73 场全部为 0，判断为国服后端未回填，非采集错误。
 - **performanceScore**：列表与详情中均为空串，该字段未启用。
-- 地图代号 Foxtrot / Jam / Plummet 的中文名待核实后补入（先保留代号）。
+- 地图代号全部核实完成（官网/BWIKI/VALORANT Wiki）：
+  Ascent 亚海悬城、Triad 隐世修所、Bonsai 霓虹町、Juliett 日落之城、
+  Infinity 幽邃地窟、Jam 莲华古城、Foxtrot 微风岛屿、Plummet 天枢云阙。
+  共 8 张图（跨赛季图池轮换，故多于单赛季 7 张）。
 - 段位 tier 数字（如 11）与国际服 tier 表不一致，未硬编码段位名，数字原样保留。
 
 ## 校验结果
