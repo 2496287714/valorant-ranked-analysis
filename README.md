@@ -27,8 +27,10 @@
 
 | 文件 | 说明 |
 |---|---|
-| `data/battles_final.json` | 清洗后的 73 场对局结构化数据 |
-| `data/battles.csv` | 同数据的 CSV 版本，由脚本从 JSON 生成 |
+| `data/battles_final.json` | 阶段1-2：73 场基础数据（胜负 / KDA / 日期） |
+| `data/battles.csv` | 同上的 CSV 版本 |
+| `data/battles_detailed.json` / `.csv` | 阶段3：40 字段宽表，含地图、特工、爆头率、ADR、RR、残局等 |
+| `data/raw/` | 浏览器采集的接口原始 JSON（对局 UUID 为不透明 ID，无登录态无法反查） |
 
 字段：
 
@@ -47,14 +49,15 @@
 
 - [x] 阶段 1：数据采集（73 场列表：胜负 / KDA / 荣誉 / 日期）
 - [x] 阶段 2：数据清洗（年份推断、模式字段去污染、JSON→CSV）
-- [ ] 阶段 3：逐场详情采集（地图 / 特工 / 评分 / 时长）
+- [x] 阶段 3：逐场详情采集（地图 / 特工 / 评分 / 时长 / 爆头率 / ADR / RR）
 - [ ] 阶段 4：假设检验与回归分析
 - [ ] 阶段 5：分析报告与可视化
 
 ## 复现
 
 ```bash
-python3 scripts/01_json_to_csv.py   # 从 JSON 重新生成 data/battles.csv
+python3 scripts/01_json_to_csv.py     # 从基础 JSON 重新生成 data/battles.csv
+python3 scripts/02_build_detailed.py  # 从 data/raw 原始数据生成详情宽表
 ```
 
 ## License
